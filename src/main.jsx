@@ -8,10 +8,11 @@ import { init, miniApp, mainButton, shareURL } from '@telegram-apps/sdk';
 const initializeTelegramSDK = async () => {
   try {
     await init();
+    miniApp.setHeaderColor('#fcb69f');
 
     if (miniApp.ready.isAvailable()) {
       await miniApp.ready();
-      miniApp.setHeaderColor('#fcb69f');
+
       console.log('Mini App готово');
 
       // Монтируем главную кнопку
