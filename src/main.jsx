@@ -58,6 +58,7 @@ import App from './App.jsx';
 if (window.Telegram?.WebApp) {
   window.Telegram.WebApp.ready(); // Сообщаем, что WebApp готов
   window.Telegram.WebApp.expand(); // Делаем окно по всей высоте
+  window.Telegram.WebApp.setHeaderColor('#fcb69f');
 }
 
 createRoot(document.getElementById('root')).render(
