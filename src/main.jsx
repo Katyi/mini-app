@@ -59,6 +59,15 @@ if (window.Telegram?.WebApp) {
   window.Telegram.WebApp.ready(); // Сообщаем, что WebApp готов
   window.Telegram.WebApp.expand(); // Делаем окно по всей высоте
   window.Telegram.WebApp.setHeaderColor('#fcb69f');
+
+  const mainButton = window.Telegram.WebApp.MainButton;
+  mainButton.setParams({
+    backgroundColor: '#aa1388', // Цвет кнопки
+    isEnabled: true, // Кнопка активна
+    isVisible: true, // Кнопка видима
+    text: 'Поделиться очками', // Текст на кнопке
+    textColor: '#000000', // Цвет текста
+  });
 }
 
 createRoot(document.getElementById('root')).render(
