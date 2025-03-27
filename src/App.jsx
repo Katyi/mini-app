@@ -69,7 +69,13 @@ const gameReducer = (state, action) => {
     case 'RESET_GAME':
       // Сбрасываем состояние игры
       return {
-        ...initialState,
+        ...state,
+        flipped: [],
+        matched: [],
+        turns: 0,
+        // score: 0,
+        pendingReset: false,
+        gameOver: false,
         deck: generateDeck(),
       };
     default:
