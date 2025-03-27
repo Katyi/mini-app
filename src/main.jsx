@@ -61,13 +61,10 @@ if (window.Telegram?.WebApp) {
   window.Telegram.WebApp.setHeaderColor('#fcb69f');
 
   const mainButton = window.Telegram.WebApp.MainButton;
-  mainButton.setParams({
-    backgroundColor: '#aa1388', // Цвет кнопки
-    isEnabled: true, // Кнопка активна
-    isVisible: true, // Кнопка видима
-    text: 'Поделиться очками', // Текст на кнопке
-    textColor: '#000000', // Цвет текста
-  });
+  mainButton.text = 'Поделиться очками';
+  mainButton.enable();
+  mainButton.visible();
+  mainButton.show();
 }
 
 createRoot(document.getElementById('root')).render(
