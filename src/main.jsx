@@ -6,13 +6,13 @@ import App from './App.jsx';
 import { init, miniApp, mainButton, shareURL } from '@telegram-apps/sdk';
 
 const initializeTelegramSDK = async () => {
-  miniApp.setHeaderColor('#fcb69f');
   try {
     await init();
 
     if (miniApp.ready.isAvailable()) {
       await miniApp.ready();
       console.log('Mini App готово');
+      miniApp.setHeaderColor('#fcb69f');
 
       // Монтируем главную кнопку
       if (mainButton.mount.isAvailable()) {
@@ -54,7 +54,6 @@ const initializeTelegramSDK = async () => {
 };
 
 initializeTelegramSDK();
-miniApp.setHeaderColor('#fcb69f');
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
