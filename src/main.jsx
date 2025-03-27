@@ -63,7 +63,6 @@ if (window.Telegram?.WebApp) {
   const mainButton = window.Telegram.WebApp.MainButton;
   mainButton.text = 'Поделиться очками';
   mainButton.enable();
-  mainButton.visible();
   mainButton.show();
 }
 
